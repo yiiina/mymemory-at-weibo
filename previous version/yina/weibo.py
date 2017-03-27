@@ -21,7 +21,6 @@ url = 'http://weibo.cn/u/%d/profile?page=1'%user_id
 
 html = requests.get(url, cookies = cookie).content
 selector = etree.HTML(html)
-print selector
 pageNum = (int)(selector.xpath('//span[@class="ctt"]')[0].attrib['value'])
  
 result = "" 
